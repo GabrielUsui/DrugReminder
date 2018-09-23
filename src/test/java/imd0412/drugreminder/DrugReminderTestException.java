@@ -1,6 +1,10 @@
 package imd0412.drugreminder;
 
 import static org.junit.Assert.assertEquals;
+<<<<<<< HEAD
+=======
+import static org.junit.jupiter.api.Assertions.fail;
+>>>>>>> upstream/master
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -15,7 +19,7 @@ import org.junit.runners.Parameterized.Parameters;
 public class DrugReminderTestException {
 	
 	@Rule
-	public ExpectedException thrown = ExpectedException.none();
+	public ExpectedException expected = ExpectedException.none();
 	
 	@Parameters(name = "TestesParametrizaveisException")
 	public static Collection<Object[]> data()
@@ -42,6 +46,7 @@ public class DrugReminderTestException {
 	public Class <? extends Exception> expectedException;
 	
 	@Test(expected = IllegalArgumentException.class)
+<<<<<<< HEAD
 	public void createReminderTest() 
 	{
 		DrugReminderImpl reminder = new DrugReminderImpl();
@@ -51,6 +56,12 @@ public class DrugReminderTestException {
 		{
 			assertEquals(expectedType, returnedType.get(i));
 		}
+=======
+	public void createReminderTest() {
+		expected.expect(expectedException);
+		new DrugReminderImpl().createReminders(startTime, frequency, duration);
+		
+>>>>>>> upstream/master
 	}
 
 }
