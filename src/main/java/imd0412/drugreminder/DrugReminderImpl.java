@@ -61,11 +61,9 @@ public class DrugReminderImpl implements IReminder {
 	public void setDuration(Integer duration) {
 		this.duration = duration;
 	}
-
-	public List<String> createReminders(String startTime, Frequency frequency, Integer duration) 
-	{
+	public List<String> createReminders(String startTime, Frequency frequency, Integer duration) {
 		throw new IllegalStateException("Method createReminders not yet implemented.");
-			
+
 	}
 
 }
